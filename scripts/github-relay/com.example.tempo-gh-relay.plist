@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!--
+        LaunchAgent template for the GitHub → Tempo relay.
+
+        Before loading:
+          1. Replace /path/to/relay.py with the actual path to relay.py on
+             this Mac (this folder, or wherever you copied it).
+          2. (Optional) rename Label and the filename if you want a
+             different bundle id than com.example.tempo-gh-relay.
+          3. Copy to ~/Library/LaunchAgents/ and load with launchctl
+             (see the README for commands).
+    -->
+
+    <key>Label</key>
+    <string>com.example.tempo-gh-relay</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/python3</string>
+        <string>/path/to/relay.py</string>
+    </array>
+
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+
+    <key>StandardOutPath</key>
+    <string>/tmp/tempo-gh-relay.log</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/tempo-gh-relay.log</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/bin:/bin:/usr/sbin:/sbin</string>
+    </dict>
+
+    <key>ProcessType</key>
+    <string>Background</string>
+</dict>
+</plist>
