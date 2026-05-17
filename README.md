@@ -9,9 +9,11 @@ the workflows Tempo enables, without belonging to the app itself.
 - **Shortcuts** — macOS Shortcuts that solve small workflow gaps, like
   "copy a deep link to the email I just selected". One-click install,
   hotkey-friendly.
-- *(future)* **Scripts** — bash/Python helpers for polling-based score
-  integrations (Pi-hole, Vaultwarden, etc.) when those grow beyond the
-  inline snippets in `tempo-scores`.
+- **Scripts** — bash/Python helpers that bridge sources Tempo can't
+  reach directly. Currently includes the **GitHub Actions relay** for
+  forwarding `github.com` webhooks through your tunnel of choice to a
+  LAN-side Tempo. More will land here as polling-based or off-LAN
+  source integrations grow beyond the inline snippets in `tempo-scores`.
 - *(future)* **PopClip extensions**, **Hazel rules**, **Service workflows**
   — same spirit, different mechanisms.
 
