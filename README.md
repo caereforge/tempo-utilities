@@ -34,8 +34,10 @@ In general:
 - **Shortcuts**: double-click the `.shortcut` file (or click an iCloud
   share link from the README) → Shortcuts.app opens an install sheet →
   Add. Optional hotkey via Shortcuts.app → ⓘ panel → Esegui con.
-- **Scripts**: copy the snippet from the README into your shell, edit
-  the config block, run from cron / launchd.
+- **Scripts**: each script lives in its own folder under `scripts/`
+  with a dedicated README covering setup steps (tunnel, secrets,
+  LaunchAgent). Follow that — the configuration is per-script, not
+  global.
 
 ## Contributing
 
